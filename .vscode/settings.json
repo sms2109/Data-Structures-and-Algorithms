@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "iostream": "cpp"
+  },
+
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.showExecutionMessage": false,
+  "C_Cpp.debugShortcut": false,
+
+
+  "debug.toolBarLocation": "hidden"
+}

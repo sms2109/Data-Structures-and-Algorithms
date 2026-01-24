@@ -1,0 +1,1 @@
+printVector(vec,n);
