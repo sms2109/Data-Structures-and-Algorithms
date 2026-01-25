@@ -64,37 +64,7 @@ void inOrder(Node* root){
     inOrder(root->right);
 }
 
-Node* delLeafNode(Node* root,int node){
-    if(root == NULL){
-        return NULL;
-    }
-    if(node < root->data){
-        root->left = delLeafNode(root->left,node);
-    }
-    if(node > root->data){
-        root->right = delLeafNode(root->right,node);
-    }
-    if(root->data == node){
-        delete root;
-    }
-    return NULL;
-}
 
-Node* delNodewithoneChild(Node* root,int node){
-    if(root == NULL){
-        return NULL;
-    }
-    if(node < root->data){
-        root->left = delLeafNode(root->left,node);
-    }
-    if(node > root->data){
-        root->right = delLeafNode(root->right,node);
-    }
-    
-    Node* validNode = root->left == NULL ? root->right : root->left;
-    delete root;
-    return validNode;  
-}
 
 int main(){
     int arr[6] = {5,1,3,4,2,7};
@@ -104,14 +74,8 @@ int main(){
     inOrder(root);
     cout<<endl;
     cout<<searchInBST(root,7)<<endl;
-    delLeafNode(root,7);
-    inOrder(root);
-    cout<<endl;
     cout<<"---------"<<endl;
     Node* root2 = buildBST(arr2,8);
-    inOrder(root2);
-    cout<<endl;
-    delNodewithoneChild(root2,5);
     inOrder(root2);
     return 0;
 }
