@@ -59,7 +59,7 @@ void kadane(int arr[], int n) {
 int main(){
     int n=5;
     int arr[n]={2,3,4,5,6};
-    // printSubarr(arr,n);
+    printSubarr(arr,n);
     // subArrSum(arr,n);
     // subArrSum2(arr,n);
     kadane(arr,n);

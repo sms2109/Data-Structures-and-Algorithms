@@ -23,6 +23,7 @@ int main(){
     //Left Shift operator
     cout<<(a << 1)<<endl;  // 1010 -> 10
     cout<<(7 << 2)<<endl;  // 0111 0000 -> 28
+    cout<<(26 << 4)<<endl;
 
     //Right Shift operator
     cout<<(a >> 1)<<endl;  // 0010 -> 2

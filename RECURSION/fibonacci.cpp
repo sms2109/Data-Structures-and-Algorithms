@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// void fibonacci(int n) {
+// void fibonacci(int n) { //O(n) time complexity //best approch
 //     int arr[n];
 //     arr[0] = 0;
 //     arr[1] = 1;
@@ -13,7 +13,7 @@ using namespace std;
 //     }
 // }
 
-int fibonacci(int n) {
+int fibonacci(int n) {  //O(2^n) time complexity //worst approch
     if (n == 0 || n == 1){
         return n;        // base case
     }

@@ -10,7 +10,9 @@ int main(){
 
     //char array
     char arr[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    int arr2[] = {1,2,3,4,5};
     cout<<arr; //not print address as like in case of int array
+    cout<<"\n"<<arr2; //print address of first element
 
     char work[] = "code";
     cout<<"\n"<<strlen(work); //4 {'c','o','d','e','\0'}
