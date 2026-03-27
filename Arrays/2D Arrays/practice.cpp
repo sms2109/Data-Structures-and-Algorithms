@@ -33,6 +33,25 @@ void spiralMatrix(int matrix[][5],int m,int n){
     }
 }
 
+int k = 2;
+void subMatrixes(int matrix[][4],int m,int n){
+     for(int i = 0; i <= n - k; i++){
+        for(int j = 0; j <= m - k; j++){
+
+            cout << "Submatrix:\n";
+
+            for(int x = i; x < i + k; x++){
+                for(int y = j; y < j + k; y++){
+                    cout << matrix[x][y] << " ";
+                }
+                cout << endl;
+            }
+
+            cout << "----\n";
+        }
+    }
+}
+
 int main(){
     int matrix[4][4] = {{1,2,3,4},
                         {5,6,7,8},
@@ -45,5 +64,6 @@ int main(){
                         {11,12,13,14,15}
                     };
 
-    spiralMatrix(matrix2,3,5);
+    // spiralMatrix(matrix2,3,5);
+    subMatrixes(matrix,4,4);
 }

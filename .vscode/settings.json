@@ -10,5 +10,6 @@
   "C_Cpp.debugShortcut": false,
 
 
-  "debug.toolBarLocation": "hidden"
+  "debug.toolBarLocation": "hidden",
+  "C_Cpp.errorSquiggles": "disabled"
 }
