@@ -26,7 +26,7 @@ int main(){
     cout<<(26 << 4)<<endl;
 
     //Right Shift operator
-    cout<<(a >> 1)<<endl;  // 0010 -> 2
+    cout<<(a >> 1)<<endl;  // 0010 -> 2s
     cout<<(8 >> 2)<<endl;  // 0010 -> 2
 
     return 0;

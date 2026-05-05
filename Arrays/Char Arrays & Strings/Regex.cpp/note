@@ -1,0 +1,60 @@
+In C++, regex (regular expressions) are used for pattern matching in strings. 
+They are part of the <regex> library introduced in C++11.
+
+#include <regex>
+
+Basic Components
+
+| Component       | Meaning                     |
+| --------------- | --------------------------- |
+| `regex`         | Defines a pattern           |
+| `regex_match`   | Matches entire string       |
+| `regex_search`  | Finds pattern inside string |
+| `regex_replace` | Replaces matched pattern    |
+
+
+regex pattern("...")
+
+This creates a regex object (pattern) that defines the pattern to be matched.
+In the example, `regex pattern("[^a-z0-9]")` defines a pattern that matches any character that is NOT a lowercase letter (a-z) or a digit (0-9).
+
+regex_match()
+This function checks if the entire string matches the regex pattern.
+example: `regex_match(s, pattern)` returns true if the entire string `s` matches the pattern defined by `pattern`.
+
+regex_search()
+This function checks if any part of the string matches the regex pattern.
+example: `regex_search(s, pattern)` returns true if any substring of `s` matches the pattern defined by `pattern`.
+
+regex_replace()
+This function replaces all occurrences of the regex pattern in the string with a specified replacement.
+example: `regex_replace(s, pattern, replacement)` returns a new string with all matches of `pattern` replaced by `replacement`.
+
+smatch match This is a type used to store the results of a regex search. It contains information about the matched substring, such as its position and length.
+
+After regex_search, you can access:
+- `match[0]`: The entire matched substring.
+- `match[1]`, `match[2]`, etc.: Captured groups if the regex pattern contains parentheses for grouping.
+
+Important Regex Symbols (MOST IMPORTANT)
+| Symbol | Meaning                          |
+| ------ | -------------------------------- |
+| `.`    | Matches any single character      |
+| `*`    | Matches zero or more occurrences  |
+| `+`    | Matches one or more occurrences   |
+| `?`    | Matches zero or one occurrence    |
+| `^`    | Matches the start of the string   |
+| `$`    | Matches the end of the string     |
+| `[]`   | Matches any one of the characters inside the brackets |
+| `()`   | Groups patterns together          |
+Example: `regex pattern("[a-z]+")` matches one or more lowercase letters`.   
+Example: `regex pattern("^[a-z0-9]+$")` matches a string that consists entirely of lowercase letters and digits.
+
+| Syntax  | Meaning              |
+| ------- | -------------------- |
+| `a`     | exact character      |
+| `.`     | any single character |
+| `[abc]` | a or b or c          |
+| `[a-z]` | lowercase letters    |
+| `[A-Z]` | uppercase letters    |
+| `[0-9]` | digits               |

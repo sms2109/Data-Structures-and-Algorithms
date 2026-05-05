@@ -53,6 +53,24 @@ bool isPalindrome2(string s){
     return true;
 }
 
+//using regex
+bool isPalindrome3(string s){
+    int n = s.length();
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+    regex pattern("[^a-z0-9]");
+    s = regex_replace(s, pattern, "");
+    cout << "String after removing non-alphabates: " << s << endl;
+    int i=0,j=s.length()-1;
+        while(i<=j){
+            if(s[i]!=s[j]){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+}
+
 int main()
 {
     string s = "0P";

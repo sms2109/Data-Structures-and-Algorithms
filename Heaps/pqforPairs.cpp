@@ -19,4 +19,5 @@ int main(){
         cout<<"top : "<<pq.top().first<<", "<<pq.top().second<<endl;
         pq.pop();
     }
+    return 0;
 }
